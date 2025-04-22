@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jana Bluj Portfolio</title>
+  
+  <!-- Tailwind CSS CDN with Dark Mode Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+  // dark mode
+    tailwind.config = {
+      darkMode: 'class', // Enable class-based dark mode
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Optional: Include Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class=" bg-white text-white font-poppins transition-colors duration-300">
+  <div class="min-h-screen flex flex-col">
+  
+    <!-- Header Section -->
+    <header class="bg-white dark:bg-gray-800 shadow-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+  
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="Images/logo.png" alt="Jana" class="h-20 w-auto"/>
+          &nbsp;&nbsp;&nbsp;
+          <p class="text-5xl text-indigo-900 dark:text-indigo-500">Jana</p>
+        </a>
+        
+        <!-- Navigation -->
+        <nav>
+          <div class="hidden md:flex space-x-6  ">
+            <a href="#home" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500">Home</a>
+            <a href="#about" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500">About Me</a>
+            <a href="#services" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500">Services</a>
+            <a href="#projects" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500">Projects</a>
+            <a href="#edu" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500">Courses</a>
+
+            <!-- Contact Link -->
+            <a href="#contact" class="text-lg hover:text-indigo-500 transition text-black dark:text-indigo-500 ml-6">Contact</a>
+
+
+          
+          <!-- Mobile Menu Toggle -->
+         
+        </nav>
+
+        <!-- Dark Mode Toggle -->
+        <div class="ml-4">
+          <button id="theme-toggle" class="text-indigo-500 focus:outline-none">
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1zm4.22 1.22a1 1 0 011.415 1.415l-.707.707a1 1 0 11-1.414-1.414l.707-.708zM17 10a1 1 0 100 2h1a1 1 0 100-2h-1zm-1.22 4.78a1 1 0 011.415-1.415l.707.708a1 1 0 11-1.414 1.414l-.708-.707zM10 17a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.78-1.22a1 1 0 00-1.415 1.415l.707.708a1 1 0 001.414-1.414l-.707-.709zM3 10a1 1 0 100 2H2a1 1 0 100-2h1zm1.22-4.78a1 1 0 00-1.415-1.415l-.708.707a1 1 0 001.414 1.414l.709-.708zM10 7a3 3 0 100 6 3 3 0 000-6z"/>
+            </svg>
+          </button>
+        </div>
+         <div class="md:hidden">
+            <button id="menu-button" class="text-indigo-500 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-300 items-center mx-auto p-10 justify-center dark:bg-gray-900">
+        <a href="#home" class="block px-4 py-2 text-indigo-500 hover:bg-gray-700 dark:hover:bg-gray-800">Home</a>
+        <a href="#about" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">About Me</a>
+        <a href="#services" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">Services</a>
+        <a href="#projects" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">Projects</a>
+        <a href="#edu" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">Courses and Certificates</a>
+        <a href="#Blog" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">Blog</a>
+        <a href="#contact" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-800">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex-1 flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+      <div class="md:w-1/2">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold dark:text-white text-black mb-4">Hello, I’m Jana Bluj </h1>
+        <p class="text-lg sm:text-xl md:text-2xl font-medium dark:text-gray-300 text-gray-600">
+          Back-end Software Developer skilled in Java and Spring Boot, with a strong focus on REST APIs and Spring Security.
+           Passionate about clean code, problem-solving, and building scalable, secure systems.
+        </p>
+        <br>
+       <a href="Files/Jana Bluj CV.pdf" download="Jana-Bluj.pdf"  
+        class="bg-indigo-700 hover:bg-indigo-500 text-white font-medium py-2 px-4 rounded inline-flex items-center">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Download CV
+      </a>
+
+      </div>
+      
+      <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQEi2Xq79XAtRw/profile-displayphoto-shrink_800_800/B4EZW0GydhHMAk-/0/1742483434705?e=1750291200&v=beta&t=ZYe0dNvL26Cbc7jivpotFenNihMXUPr8jHaRgQyTyYc" alt="Profile Picture" class="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-indigo-500 object-cover">
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+      <h2 class="text-indigo-500 text-3xl sm:text-4xl font-semibold mb-6 ">About Me</h2>
+      <p class="text-lg sm:text-xl font-medium  dark:text-white text-black ">
+        Hi, my name is Jana Bluj, Dedicated and results-driven Software Developer with expertise in back-end development using Java and Spring Boot.
+        Proficient in building scalable and secure applications with a strong understanding of REST APIs and Spring Security.
+        Passionate about problem-solving, clean code, and efficient system design.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+      <h2 class="text-indigo-500 text-3xl sm:text-4xl font-semibold mb-6">The Services I Offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+       
+        <!-- Service 1 -->
+        <div class="bg-gray-100 dark:bg-gray-600 rounded-lg p-6 flex flex-col items-center text-center">
+          <i class="fas fa-code text-indigo-500 text-3xl mb-4"></i>
+          <h3 class="text-black dark:text-white text-2xl font-semibold mb-2">Web Development</h3>
+          <p class="text-black dark:text-white text-base">I create stunning interfaces using HTML, CSS, JavaScript, and frameworks like Tailwindcss.</p>
+        </div>
+       
+        <!-- Service 2 -->
+        <div class="bg-gray-100 dark:bg-gray-600 rounded-lg p-6 flex flex-col items-center text-center">
+          <i class="fas fa-mobile-alt text-indigo-500 text-3xl mb-4"></i>
+          <h3 class="text-black dark:text-white text-2xl font-semibold mb-2">Mobile Development</h3>
+          <p class="text-black dark:text-white text-base">Expert in Java for building robust and scalable back-end systems and cross-platform solutions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+      <h2 class="text-indigo-500 text-3xl sm:text-4xl font-semibold mb-6">Featured Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-gray-100 dark:bg-gray-600 rounded-lg p-6 flex flex-col">
+          <img src="images/Picture1.png" alt="JU Accommodate" class="rounded-xl mb-7 object-cover h-90">
+          <br><br><br><br><br><br><br>
+          <h3 class="text-indigo-500 text-2xl font-semibold mb-2">JU Accommodate</h3>
+          <p class="text-black dark:text-white text-lg flex-grow">A web application that helps University of Jordan students and housing providers connect easily.
+             Students can find, book, and manage their housing, while housing providers can list accommodations, handle bookings, and reach a wide student audience, 
+             all in one place.</p>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-100 dark:bg-gray-600 rounded-lg p-6 flex flex-col">
+          <img src="images/Picture 2.png" alt="JU Scooters" class="rounded-lg mb-4 object-cover h-[85]">
+          <h3 class="text-indigo-500 text-2xl font-semibold mb-2">JU Scooters</h3>
+          <p class="text-black dark:text-white text-lg flex-grow">The project proposes implementing electric scooters at the University of Jordan to enhance sustainable and efficient transportation across campus.
+             It aims to provide a convenient, eco-friendly solution for navigating the large campus.
+             The initiative addresses commuting challenges between different colleges.</p>
+        </div>
+        <!-- Project 3 -->
+        <div class="bg-gray-100 dark:bg-gray-600 rounded-lg p-6 flex flex-col">
+          <img src="https://t4.ftcdn.net/jpg/04/26/96/71/360_F_426967161_ixbl8OdU9XMpsHTqqsps2HhJI3t0Rwp0.jpg" alt="Electra Car" class="rounded-lg mb-4 object-cover h-90">
+          <br><br><br><br><br>
+          <h3 class="text-indigo-500 text-2xl font-semibold mb-2">Electra car</h3>
+          <p class="text-black dark:text-white text-lg flex-grow">ElectraCar is a free mobile app that helps electric vehicle drivers plan long trips efficiently. 
+            It calculates optimal routes based on battery range and charging station locations.
+            Users can find and filter nearby stations to match their needs, ensuring smooth and reliable travel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Certificates-->
+
+    <section id="edu" class="px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+      <h2 class="text-indigo-500 text-3xl sm:text-4xl font-semibold mb-8">Courses and certificates</h2>
+
+        <div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+             <!-- Certificate 1 -->
+             <div class="bg-gray-100 dark:bg-gray-600 rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <span class="text-m font-medium text-gray-500 dark:text-gray-100">March 2025</span>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-indigo-300 mt-1">
+                  Spring Boot for Beginners
+                </h3>
+                <p class="text-indigo-600 dark:text-gray-100 mb-3">Amigoscode</p>
+                <p class="text-gray-600 text-sm dark:text-gray-100">
+                  Fundamentals of Spring Boot including auto-configuration, Spring Data JPA, 
+                  and building production-ready applications.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Certificate 2 -->
+            <div class="bg-gray-100 dark:bg-gray-600 rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <span class="text-m font-medium text-gray-500 dark:text-gray-100">January 2025</span>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-indigo-300 mt-1">
+                  Spring Framework 5 & Spring Boot 2
+                </h3>
+                <p class="text-indigo-600 mb-3 dark:text-gray-100">Udemy</p>
+                <p class="text-gray-600 text-sm dark:text-gray-100">
+                  Mastered dependency injection, MVC architecture, and RESTful APIs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="bg-gray-100 dark:bg-gray-600 rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <span class="text-m font-medium text-gray-500 dark:text-gray-100">July 2024</span>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-indigo-300 mt-1">
+                  Full-Stack Web Development Bootcamp
+                </h3>
+                <p class="text-indigo-600 mb-3 dark:text-gray-100">Udemy</p>
+                <p class="text-gray-600 text-sm dark:text-gray-100">
+                  61.5-hour intensive course covering frontend and backend technologies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="bg-gray-100 dark:bg-gray-600 rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <span class="text-m font-medium text-gray-500 dark:text-gray-100">May 2024</span>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-indigo-300 mt-1">
+                  Full-Stack Development (Spring Boot)
+                </h3>
+                <p class="text-indigo-600 mb-3 dark:text-gray-100">Atypical Academy</p>
+                <p class="text-gray-600 text-sm dark:text-gray-100">
+                  Recognized for outstanding performance in problem-solving and teamwork.
+                </p>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+    </section>
+    
+    
+    <!-- Contact Section -->
+<section id="contact" class="px-6 sm:px-10 md:px-16 py-12 bg-white dark:bg-gray-800">
+  <h2 class="text-indigo-500 text-3xl sm:text-4xl font-semibold text-left mb-6">Connect with Me</h2>
+  <p class="dark:text-white text-black text-2xl text-left mb-8">Contact me, let's make magic together</p>
+  
+  <div class="flex flex-col lg:flex-row gap-8 items-center">
+    <!--Form -->
+    <div class="w-full lg:w-1/2">
+      <form class="space-y-6">
+        <input type="text" placeholder="Name" required class="w-full p-4 rounded-lg dark:bg-gray-700 bg-gray-300 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" placeholder="Email" required class="w-full p-4 rounded-lg dark:bg-gray-700 bg-gray-300 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <textarea placeholder="Message" required class="w-full p-4 rounded-lg dark:bg-gray-700 bg-gray-300 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" 
+          rows="5"></textarea>
+        <button type="submit" class="w-full bg-indigo-700 dark:bg-indigo-500 text-white py-3 rounded-lg font-semibold hover:bg-indigo-500 transition">
+          Send
+        </button>
+      </form>
+    </div>
+    
+    <!-- Photo -->
+    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end p-28">
+      <img src="images/Picture3.png" alt="Contact Me" class="rounded-lg object-cover h-full w-full shadow-lg" >
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="px-6 sm:px-10 md:px-16 py-6 bg-gray-100 dark:bg-gray-800">
+      <p class=" dark:text-white text-black ">
+        © 2025 Jana Bluj| Fullstack Developer | Designed by @JanaBluj
+      <p class=" dark:text-white text-black ">Phone: 0791874327</p> 
+      <p class=" dark:text-white text-black ">Email: janablouj4@gmail.com</p>
+      </p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for Mobile Menu and Theme Toggle -->
+  <script>
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Initial Setup
+    if (localStorage.getItem('color-theme') === 'dark' || 
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      darkIcon.classList.add('hidden');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      darkIcon.classList.remove('hidden');
+      lightIcon.classList.add('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+
+      // If the page has the class dark, remove it, otherwise add it
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Close mobile menu when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!menuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
+  </header>
+  </body>
+</html>
